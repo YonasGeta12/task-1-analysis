@@ -1,0 +1,33 @@
+name: CI/CD Pipeline
+
+on:
+  push:
+    branches:
+      - task-1  # Run the workflow on pushes to the task-1 branch
+
+jobs:
+  build:
+    runs-on: windows-latest  # Use the latest version of the Windows environment
+
+    steps:
+    - name: Checkout Repository
+      uses: actions/checkout@v2
+
+    - name: Set up Python
+      uses: actions/setup-python@v2
+      with:
+        python-version: 3.8  # Adjust the version as needed
+
+    - name: Install Dependencies
+      run: |
+        python -m pip install --upgrade pip
+        pip install -r requirements.txt  # Install your project dependencies
+
+    - name: Run Tests
+      run: |
+        python -m pytest  # Adjust the test command as needed
+
+    - name: Deploy (Optional)
+      if: github.event_name == 'push' && github.ref == 'refs/heads/task-1'
+      run: |
+        # Add deployment steps if needed
