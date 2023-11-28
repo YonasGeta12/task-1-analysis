@@ -26,8 +26,3 @@ jobs:
     - name: Run Tests
       run: |
         python -m pytest  # Adjust the test command as needed
-
-    - name: Deploy (Optional)
-      if: github.event_name == 'push' && github.ref == 'refs/heads/task-1'
-      run: |
-        # Add deployment steps if needed
