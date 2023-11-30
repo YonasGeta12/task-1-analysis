@@ -22,7 +22,6 @@ jobs:
       - name: Install dependencies
         run: |
           python -m pip install --upgrade pip
-          pip install -r requirements.txt
-
+          pip install -r c:\Users\Dr.Beti\Documents\10academy\task-1-analysis\requirements.txt
       - name: Run tests
         run: pytest
