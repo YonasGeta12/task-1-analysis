@@ -29,7 +29,29 @@ class SlackDataLoader:
     
     '''
     # combine all json file in all-weeks8-9
-    
+    # Inside the SlackDataLoader class in loader.py
+    def slack_parser(self, path_channel):
+        """ 
+        Parse Slack data to extract useful information from the JSON file.
+        
+        Args:
+            path_channel (str): Path to the channel data.
+        
+        Returns:
+            pd.DataFrame: DataFrame containing the parsed Slack data.
+        """
+        # Add your implementation here
+        pass  # Replace 'pass' with the actual implementation
+
+    def load_combined_data(self):
+        # Specify the path to the data
+        path_to_data = "C:/Users/Dr.Beti/Documents/10academy/anonymized.data"  # Update with your actual path
+
+        # Call the slack_parser method to load and combine data
+        df_combined = self.slack_parser(path_to_data)
+
+        return df_combined
+
     def __init__(self, path):
         '''
         path: path to the slack exported data folder
