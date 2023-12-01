@@ -1,0 +1,10 @@
+ Summarize MLOps Components
+
+Feature Store:
+A Feature Store is a centralized repository for storing and managing features used in machine learning models. It enables efficient feature sharing, reuse, and retrieval, promoting consistency across different stages of the machine learning pipeline. This component facilitates collaboration between data scientists and ensures that features used during model training are consistent with those used during inference.
+
+Model Versioning:
+Model versioning involves assigning unique identifiers to different versions of machine learning models. This process helps track changes, compare model performance over time, and ensure reproducibility. Versioning is crucial for managing the lifecycle of machine learning models, allowing teams to rollback to previous versions if needed and maintain a clear history of model improvements.
+
+Model Monitoring:
+Model monitoring involves the continuous tracking and evaluation of machine learning models in production. It helps detect performance degradation, concept drift, and other issues that may impact model effectiveness. Monitoring allows teams to ensure that deployed models meet expectations and perform reliably over time. Key metrics, such as accuracy and inference speed, are monitored to trigger alerts or retraining when necessary.
